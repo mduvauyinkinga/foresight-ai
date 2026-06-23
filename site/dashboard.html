@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Dashboard — KTM Tech Forex</title><meta name="description" content="Live AI forex dashboard with real-time prices, currency strength and risk calculator."/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap"/><link rel="stylesheet" href="styles.css"/></head><body>
+<div class="shell">
+<aside class="sidebar">
+  <a href="index.html" class="brand"><div class="logo">K</div> KTM Forex</a>
+  <div class="nav">
+    <a href="dashboard.html" data-nav="dashboard">📊 Dashboard</a>
+    <a href="signals.html" data-nav="signals">📡 Signals</a>
+    <a href="strength.html" data-nav="strength">⚡ Strength</a>
+    <a href="assistant.html" data-nav="assistant">✨ AI Assistant</a>
+    <a href="settings.html" data-nav="settings">⚙️ Settings</a>
+  </div>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <div><h1>Dashboard</h1><p>Live AI verdicts across major pairs.</p></div>
+    <div class="status" id="status"><span class="dot"></span> Connecting to live feed…</div>
+  </div>
+  <div id="pairs-grid" class="grid grid-3"></div>
+   <section class="section"><div class="grid grid-3">
+     <div class="glass" style="padding:22px"><h2 style="font-size:16px;margin-bottom:14px">Currency Strength</h2><div id="strength-list"></div></div>
+     <div class="glass" style="padding:22px">
+       <h2 style="font-size:16px">Smart Risk Manager</h2>
+       <p style="font-size:12px;color:var(--muted);margin-top:4px">Auto-calculate position size.</p>
+       <label>Account Balance ($)</label><input id="bal" type="number" value="1000"/>
+       <label>Risk (%)</label><input id="rsk" type="number" step="0.5" value="2"/>
+       <label>Stop Loss (pips)</label><input id="pips" type="number" value="50"/>
+       <div style="margin-top:18px;padding:14px;background:rgba(0,0,0,0.3);border-radius:10px;font-size:14px">
+         <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="color:var(--muted)">Risk Amount</span><span class="mono" id="riskAmt">$0</span></div>
+         <div style="display:flex;justify-content:space-between"><span style="color:var(--muted)">Suggested Lot</span><span class="mono" id="riskLot" style="color:var(--primary);font-weight:700">0</span></div>
+       </div>
+     </div>
+     <div class="glass" style="padding:22px"><h2 style="font-size:16px;margin-bottom:10px">Economic Calendar</h2><div id="calendar-list"></div></div>
+   </div></section>
+</main>
+</div>
+<script src="app.js"></script>
+<script>document.querySelector('[data-nav="dashboard"]')?.classList.add('active');</script>
+</body></html>
