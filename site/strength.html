@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Currency Strength — KTM Tech Forex</title><meta name="description" content="Relative strength ranking across the 8 major currencies."/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap"/><link rel="stylesheet" href="styles.css"/></head><body>
+<div class="shell">
+<aside class="sidebar">
+  <a href="index.html" class="brand"><div class="logo">K</div> KTM Forex</a>
+  <div class="nav">
+    <a href="dashboard.html" data-nav="dashboard">📊 Dashboard</a>
+    <a href="signals.html" data-nav="signals">📡 Signals</a>
+    <a href="strength.html" data-nav="strength">⚡ Strength</a>
+    <a href="assistant.html" data-nav="assistant">✨ AI Assistant</a>
+    <a href="settings.html" data-nav="settings">⚙️ Settings</a>
+  </div>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <div><h1>Currency Strength</h1><p>Relative ranking across the 8 major currencies.</p></div>
+    <div class="status" id="status"><span class="dot"></span> Connecting to live feed…</div>
+  </div>
+  <div class="glass" style="padding:24px;max-width:720px"><div id="strength-full"></div></div>
+</main>
+</div>
+<script src="app.js"></script>
+<script>document.querySelector('[data-nav="strength"]')?.classList.add('active');</script>
+</body></html>
